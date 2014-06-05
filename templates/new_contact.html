@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} New Contact {% endblock %}
+
+{% block content %}
+
+<form method="POST" action="#">{% csrf_token %}
+    First Name:
+    <input type="text" name="first_name" value="{{ contact.first_name }}">
+    </input>{{ form.errors.first_name }}<br/>
+
+    Last Name:
+    <input type="text" name="last_name" value="{{ contact.last_name }}">
+    </input>{{ form.errors.last_name }}<br/>
+
+    Phone No:
+    <input type="text" name="phone_no" value="{{ contact.phone_no }}">
+    </input>{{ form.errors.phone_no }}<br/>
+
+    Email:
+    <input type="text" name="email" value="{{ contact.email }}">
+    </input>{{ form.errors.email }}<br/>
+
+    Address:
+    <textarea name="address">{{ contact.address }}
+    </textarea>{{ form.errors.address }}<br/>
+<button type="submit">Submit</button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>ContactUp{% block title %} - {{ title }} {% endblock %}</title>
+    </head>
+    <body>
+        {% block message %}
+        {% if messages %}
+        <ul class="message">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endblock message %}
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>

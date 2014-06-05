@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Are you sure to delete {{ conatct.first_name }}'s contact ?
+<form action="#" method="POST">{% csrf_token %}
+    <button type="submit">Submit</button>
+    <a href="{% url 'index' %}"> Cancel </a>
+</form>
+{% endblock %}
