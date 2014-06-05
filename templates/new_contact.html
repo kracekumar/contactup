@@ -23,6 +23,20 @@
     Address:
     <textarea name="address">{{ contact.address }}
     </textarea>{{ form.errors.address }}<br/>
+
+    Website:
+    <input type="text" name="website" value="{{ contact.extradetail.website }}">
+    </input>{{ form.errors.website }}<br/>
+
+    Relationship:
+    <input type="text" name="relationship" value="{{ contact.extradetail.relationship }}">
+    </input>{{ form.errors.relationship }}<br/>
+
+    Notes:
+    <textarea name="notes">{{ contact.extradetail.notes }}
+    </textarea>{{ form.errors.notes }}<br/>
+
+    birthday: {{ form.birthday }}<br/>
 <button type="submit">Submit</button>
 </form>
 

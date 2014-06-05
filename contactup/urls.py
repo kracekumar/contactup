@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'new/$', 'contacts.views.new_contact', name='new_contact'),
     url(r'edit/(?P<contact_id>\d+)/$', 'contacts.views.edit_contact', name='edit_contact'),
     url(r'delete/(?P<contact_id>\d+)/$', 'contacts.views.delete_contact', name='delete_contact'),
+    url(r'(?P<character>^[a-zA-Z])/$', 'contacts.views.display_contacts_for_character', name='display_character_for_character'),
 
     url(r'^', 'contacts.views.index', name="index"),
 )

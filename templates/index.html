@@ -11,6 +11,14 @@
         </th>
         <th>Email
         </th>
+        <th>Website
+        </th>
+        <th>Notes
+        </th>
+        <th>Relationship
+        </th>
+        <th>Birthday
+        </th>
         <th>Address
         </th>
     </tr>
@@ -21,6 +29,10 @@
     <td>{{ contact.phone_no }}</td>
     <td>{{ contact.address }}</td>
     <td>{{ contact.email }}</td>
+    <td>{{ contact.extradetail.website }}</td>
+    <td>{{ contact.extradetail.notes }}</td>
+    <td>{{ contact.extradetail.relationship }}</td>
+    <td>{{ contact.extradetail.birthday }}</td>
     <td><a href="{% url 'edit_contact' contact.id %}">Edit</td>
     <td><a href="{% url 'delete_contact' contact.id %}">Delete</td>
     </tr>
