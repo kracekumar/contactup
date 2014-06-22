@@ -1,6 +1,6 @@
 ### Steps
 
-- Start a project called 'contactup'.  
+- Start a project called 'contactup'.
   `django-admin.py startproject contactup`
 
 - `cd contactup`

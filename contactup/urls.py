@@ -9,7 +9,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^logout/$', 'contacts.views.logout_page', name='logout'),
     url(r'new/$', 'contacts.views.new_contact', name='new_contact'),
     url(r'edit/(?P<contact_id>\d+)/$', 'contacts.views.edit_contact', name='edit_contact'),
     url(r'delete/(?P<contact_id>\d+)/$', 'contacts.views.delete_contact', name='delete_contact'),

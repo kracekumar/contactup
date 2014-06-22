@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 from django.contrib import messages
+from django.contrib.auth import logout
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
 
@@ -81,3 +82,8 @@ def delete_contact(request, contact_id):
 def display_contacts_for_character(request, character):
     contacts = Person.objects.filter(first_name__istartswith=character)
     return render(request, 'index.html', {'contacts': contacts})
+
+
+def logout_page(request):
+    logout(request)
+    return redirect(reverse('index'))
